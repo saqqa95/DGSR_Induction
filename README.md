@@ -43,19 +43,19 @@ instead of "data" write the name of the csv file.
 
 Next, run generate_neg.py to speed up the test. You have to change the data name in the code before running it.
 
-**Initial Model training**
+### **Initial Model training**
 After creating the graph and subgraphs, run main_train_test.py to train the DGSR model. The model should be run the same way as new_data.py. Make sure to 
 set the parameter model_record to true to save the model state dictionary.
 
-**Offline Inference**
+### **Offline Inference**
 Using new_data.py, construct a new graph using the new csv file that contains the old users and the new users.
 
 Then run DGSR_inference.py after adding the path to the saved model. The file should also be run using the new csv file. 
 
-**Partial Retraining**
+### **Partial Retraining**
 Construct a new graph with new and old users using new_data.py.
 
 run partial_retrain.py to use the saved model to partially retrain for the new users. 
 
-**Acknowledgement**
+## Acknowledgement
 The implementation is based on https://github.com/CRIPAC-DIG/DGSR 
